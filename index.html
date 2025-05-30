@@ -24,7 +24,8 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header class="container mx-auto font-raleway">
+  <section id="home-page" >
+     <header class="container mx-auto font-raleway">
    <div>
     <div class="navbar bg-base-100 shadow-sm">
   <div class="navbar-start">
@@ -344,11 +345,11 @@
             <input class="p-2 w-full bg-white border rounded-lg " type="text" placeholder="Enter your name"><br><br>
             
              <label class="font-semibold text-black " for="">Phone Number*</label><br>
-            <input class="p-2 w-full bg-white border rounded-lg" type="text" placeholder="Enter your phone number"><br><br>
+            <input id="phone"  class="p-2 w-full bg-white border rounded-lg" type="text" placeholder="Enter your phone number"><br><br>
              <label class="font-semibold text-black" for="">Email ID</label><br>
             <input class="p-2 w-full bg-white border rounded-lg" type="text" placeholder="Enter your emain id"><br>
 <div>
-  <button class="btn bg-back w-full text-white" disabled>Next</button>
+  <button id="next" onclick="successful()" class="btn bg-back w-full text-white" disabled>Next</button>
 </div>
 
  </form> 
@@ -361,9 +362,9 @@
 
          </div>
     </section>
-  
-
    </main>
+
+   <!-- footer section -->
    <footer class=" bg-black p-24 text-white space-y-6">
   
   <div class="flex flex-row justify-between">
@@ -373,8 +374,8 @@
      P-Ticket is a digital platform to make your <br>
       daily commuting better.
     </p>
-  
     </div>
+
   <div>
     <h6 class="font-semibold text-2xl mb-6">Download our app</h6>
     <div class="flex flex-row items-center gap-4">
@@ -403,6 +404,18 @@
   
    </div>
 </footer>
+  </section>
+<!-- success message section -->
+ <section id="success" class="min-h-screen  flex items-center justify-center hidden">
+  <div class="flex flex-col space-y-4 items-center">
+    <img src="images/success.png" alt="">
+    <h3 class="text-[#27AE60] font-bold text-2xl uppercase">Success</h3>
+    <h6 class="font-medium text-xl text-[#4A4A4A] text-center">Thank you for Booking Our Bus Seats. <br>
+We are working hard to find the best service and deals for you.</h6>
+<p>Shortly you will find a confirmation in your email</p>
+<button onclick="continueButton()" class="btn text-white bg-[#27AE60]">Continue</button>
+  </div>
+ </section>
    <script src="scripts/utility.js"></script>
    <script src="scripts/tickets.js"></script>
 </body>
